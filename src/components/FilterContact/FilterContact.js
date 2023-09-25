@@ -35,5 +35,3 @@ export const FilterContact = () => {
     </label>
   );
 };
-
-//q. is it correct?
