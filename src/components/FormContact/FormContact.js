@@ -47,7 +47,9 @@ export const FormContact = () => {
       toast.warn(`is already in contacts.`);
       return;
     }
-    dispatch(addContact(contact));
+    dispatch(addContact(contact))
+      .unwrap()
+      .then(toast.success(`${contact.name} added to contacts.`));
     setName('');
     setNumber('');
   };
