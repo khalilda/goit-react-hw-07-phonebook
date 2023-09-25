@@ -1,4 +1,3 @@
-// import { filterContacts } from 'components/redux/sliceContacts';
 import { useDispatch, useSelector } from 'react-redux';
 import FilterModule from './FilterContact.module.css';
 import { ToastContainer } from 'react-toastify';
@@ -8,12 +7,6 @@ import { setFilter } from 'components/redux/filterSlice';
 export const FilterContact = () => {
   const dispatch = useDispatch();
   const filtered = useSelector(setFilter);
-
-  // const onChange = event => {
-  //   const { value } = event.target;
-  //   toast.info(`Searched for "${value}" `);
-  //   dispatch(filterContacts(value.trim()));
-  // };
 
   const onChange = event => {
     dispatch(setFilter(event.target.value));
