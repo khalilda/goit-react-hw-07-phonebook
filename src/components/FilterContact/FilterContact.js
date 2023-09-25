@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import FilterModule from './FilterContact.module.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getFilter } from 'components/redux/contactsSelector';
+import { setFilter } from 'components/redux/filterSlice';
 
 export const FilterContact = () => {
   const dispatch = useDispatch();
-  const filtered = useSelector(getFilter);
+  const filtered = useSelector(setFilter);
 
   // const onChange = event => {
   //   const { value } = event.target;
@@ -16,7 +16,7 @@ export const FilterContact = () => {
   // };
 
   const onChange = event => {
-    dispatch(getFilter(event.target.value));
+    dispatch(setFilter(event.target.value));
   };
 
   return (

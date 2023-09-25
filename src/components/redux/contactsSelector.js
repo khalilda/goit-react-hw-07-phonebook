@@ -1,8 +1,8 @@
-import { createSelector } from 'reselect';
-
 // export const getContacts = state => state.contacts;
 // export const getFilter = state => state.filtered;
 // // export const getFilter = state => state.contacts.filtered;
+
+import { createSelector } from 'reselect';
 
 export const getContacts = state => state.contacts.items;
 export const getIsLoading = state => state.contacts.loading;
